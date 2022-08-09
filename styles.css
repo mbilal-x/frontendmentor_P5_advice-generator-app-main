@@ -1,0 +1,91 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+
+/* css reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* custom css  */
+body{
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    background-color: hsl(218, 23%, 16%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice-gen{
+    margin: 1rem;
+    background-color: hsl(217, 19%, 24%);
+    color: hsl(220, 18%, 83%);
+    max-width: 340px;
+    min-height: 250px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.advice-gen__advice{
+    padding: 3rem 2rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.advice__number{
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4ch;
+    font-weight: lighter;
+    color: hsl(150, 100%, 66%);
+}
+
+.advice__quote{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+
+}
+
+.advice__divider-pattern{
+    background-image: url(./images/pattern-divider-mobile.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 25px;
+}
+
+.advice_gen__button{
+    min-height: 60px;
+    min-width: 60px;
+    background-color: hsl(150, 100%, 66%);
+    background-image: url(./images/icon-dice.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.5rem;
+    border-radius: 50%;
+    margin-bottom: -2rem;
+}
+
+.advice_gen__button:hover{
+    box-shadow: 0 0 15px  hsl(193, 38%, 86%);
+}
+
+@media(min-width:800px){
+    .advice-gen{
+        max-width: 460px;
+    }
+
+    .advice__divider-pattern{
+        background-image: url(./images/pattern-divider-desktop.svg);
+        min-height: 2.5rem;
+    }
+}
+
