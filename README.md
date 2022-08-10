@@ -24,13 +24,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./)
+![](./)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://github.com/mbilal-x/frontendmentor_P5_advice-generator-app-main)
+- Live Site URL: [live site](https://mbilal-x.github.io/frontendmentor_P5_advice-generator-app-main/)
 
 ## My process
 
@@ -47,27 +48,35 @@ Users should be able to:
 
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+I learned the use of async functions and await keyword.
+Used fetch() to get JSON data from API.
 
 
+favorite code snippet:
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+const loadAdvice = async () => {   
+        try{
+            const res =  await fetch(baseURL);
+            const data = await res.json();
+            
+            advice_children[0].innerText = `advice #${data.slip.id}`;
+            advice_children[1].innerText = data.slip.advice;
+            // console.log(data.slip.id);
+            // console.log(data.slip.advice);
+        }catch(e){
+            console.log('Error loading advice: ', e);
+        }
+    };
+loadAdvice();
 ```
 
 ### Continued development
+I still don't feel like i have completely grasped the async function and requesting concepts and need more practice and time with it.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
+- I will make a few more API requesting projects
+- Next time I will also use Axios [A library for making HTTP requests]
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Muhammad Bilal](mohammadbilal.me)
+- Frontend Mentor - [@mbilal-x](https://www.frontendmentor.io/profile/mbilal-x)
