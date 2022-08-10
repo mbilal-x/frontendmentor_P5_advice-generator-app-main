@@ -76,6 +76,7 @@ body{
 
 .advice_gen__button:hover{
     box-shadow: 0 0 15px  hsl(193, 38%, 86%);
+    cursor: pointer;
 }
 
 @media(min-width:800px){
